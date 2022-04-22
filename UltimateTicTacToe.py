@@ -6,6 +6,9 @@ window.title("UltimateTicTacToe")
 
 turn = True
 
+def exit():
+    window.destroy()
+
 def player1(button):
     global turn
     if turn == True:
@@ -34,10 +37,7 @@ button9 = Button(window, text = " ", width = 10, height = 5, command = lambda: p
 button9.grid(row = 4, column = 2)
 buttonNewGame = Button(window, text = "New Game", width = 20, height = 5)
 buttonNewGame.grid(row = 2, column = 4)
-buttonExit = Button(window, text = "Exit The Game", width = 20, height = 5)
+buttonExit = Button(window, text = "Exit The Game", width = 20, height = 5, command = lambda: exit())
 buttonExit.grid(row = 3, column = 4)
-
-if button1.cget() == "X":
-    print("Si")
 
 window.mainloop()
